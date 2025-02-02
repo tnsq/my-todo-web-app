@@ -45,7 +45,7 @@ st.write("")
 st.write("")
 st.write("")
 st.write("")
-st.write("For reportingn an issue email at tanishqmirdha2005@gmail.com",
+st.write("For Reporting an issue email at tanishqmirdha2005@gmail.com",
         unsafe_allow_html=True)
 st.write("Do not message <b>Unnecessarily</b>.Only message if you are facing any <b>problem<b>.",
         unsafe_allow_html=True)
