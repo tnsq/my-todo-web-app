@@ -12,6 +12,12 @@ def add_todo():
 st.title("My To-do App")
 
 st.subheader("This is my to-do app")
+st.write("This app is to improve your <b>Productivity</b>",
+        unsafe_allow_html=True)
+a=st.text_input(label="",
+                placeholder="Add new todo....",
+                on_change=add_todo,
+                key='new_todo')
 
 for index,todo in enumerate(todos):
     checkbox= st.checkbox(todo, key=index+1)
@@ -21,10 +27,7 @@ for index,todo in enumerate(todos):
         del st.session_state[index+1]
         st.rerun()
 
-a=st.text_input(label="",
-                placeholder="Add new todo....",
-                on_change=add_todo,
-                key='new_todo')
+
 
 
 
