@@ -10,14 +10,15 @@ def add_todo():
     functions.write_todos(todos)
 
 st.title("My To-do App")
+
 st.subheader("This is my to-do app")
 
 for index,todo in enumerate(todos):
-    checkbox= st.checkbox(todo, key=todo)
+    checkbox= st.checkbox(todo, key=index+1)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
-        del st.session_state[todo]
+        del st.session_state[index+1]
         st.rerun()
 
 a=st.text_input(label="",
