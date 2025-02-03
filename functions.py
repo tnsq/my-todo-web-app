@@ -11,6 +11,9 @@ import os
 #     with open(filepath, 'r') as file:
 #         return file.readlines()
 def read_todos(filepath=FILEPATH):
+    if not os.path.exists(filepath):
+        with open(filepath,'w') as file:
+            pass
     with open(filepath,'r') as file:
         todos_read=file.readlines()
 
